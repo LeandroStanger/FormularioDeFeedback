@@ -38,3 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.getElementById('feedback').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    fetch(this.action, {
+        method: this.method,
+        body: new FormData(this),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        window.location.href = 'obrigado.html#obrigado';
+    }).catch(error => {
+        console.error('Erro:', error);
+    });
+});

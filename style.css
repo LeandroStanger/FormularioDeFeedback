@@ -96,3 +96,6 @@ footer {
     box-sizing: border-box;
     resize: vertical;
 }
+#obrigado {
+    text-align: center;
+}
